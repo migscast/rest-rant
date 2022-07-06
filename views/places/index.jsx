@@ -14,7 +14,7 @@ function index (data) {
     return (
       <Def>
           <main>
-              <h1>PLACES INDEX PAGE</h1>
+              <h1>INDEX</h1>
               {placesFormatted}
           </main>
       </Def>
