@@ -1,5 +1,5 @@
-module.exports =  [{
-    
+module.exports =  [
+    {    
         name: 'Puzzles',
         city: 'Jersey City',
         state: 'NJ',
