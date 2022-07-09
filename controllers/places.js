@@ -7,10 +7,7 @@ router.get('/new', (req, res) => {
   })
   
 
-router.get('/:arrayIndex', (req,res) => {
-
-    let index = req.params.arrayIndex;
-
+router.get('/', (req,res) => {
         res.render(`places/index`, {places})
     
 })
