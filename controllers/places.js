@@ -2,12 +2,13 @@ const router = require('express').Router()
 
 // More code here in a moment
 router.get('/new', (req, res) => {
-    res.render('places/new')
+    res.render(`places/new`)
   })
   
 
-router.get('/', (req,res) => {
+router.get('/:arrayIndex', (req,res) => {
 
+    let index = req.params.arrayIndex;
     
         let places = [{
             name: 'Puzzles',
@@ -23,8 +24,14 @@ router.get('/', (req,res) => {
             pic: '/images/manga-meat.jpg'
         }]
 
-        res.render('places/index', {places})
+        res.render(`places/index`, {places})
     
 })
+
+router.post('/', (req, res) => {
+    console.log(req.body)
+    res.send('POST /places')
+})
+  
 
 module.exports = router
