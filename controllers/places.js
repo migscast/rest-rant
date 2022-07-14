@@ -6,6 +6,18 @@ router.get('/new', (req, res) => {
     res.render(`places/new`)
   })
   
+  router.get('/:id/edit', (req, res) => {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+      res.render('error404')
+    }
+    else if (!places[id]) {
+      res.render('error404')
+    }
+    else {
+        res.render('places/edit', {place: places[id], id})
+    }
+  })  
 
 router.get('/:id', (req, res) => {
     let id = Number(req.params.id)
@@ -22,10 +34,9 @@ router.get('/:id', (req, res) => {
 
   router.get('/', (req,res) => {
         res.render(`places/index`, {places})
-    
 })
 
-  
+
 
 router.post('/', (req, res) => {
     console.log(req.body)
@@ -66,7 +77,7 @@ router.post('/', (req, res) => {
   
         // Save the new data into places[id]
         places[id] = req.body
-        res.redirect(`/places/${id}`)
+        res.redirect(`/places`)
     }
   })
   
@@ -87,19 +98,7 @@ router.post('/', (req, res) => {
     }
   })
   
-  router.get('/:id/edit', (req, res) => {
-    let id = Number(req.params.id)
-    if (isNaN(id)) {
-      res.render('error404')
-    }
-    else if (!places[id]) {
-      res.render('error404')
-    }
-    else {
-        places.splice(id, 1)
-        res.render('places/edit', {place: places[id]})
-    }
-  })
+
   
 
 module.exports = router
