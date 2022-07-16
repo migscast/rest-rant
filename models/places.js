@@ -4,7 +4,7 @@ const { Schema } = mongoose
 
 const placeSchema = new Schema({
     name: {type: String, required: true},
-    pic: String,
+    pic: {type: String, default: '/images/bear-pancakes.jpg'},
     cuisines: {type: String, required: true},
     city: {type: String, default: 'Anytown'},
     state: {type: String, default: 'USA'},

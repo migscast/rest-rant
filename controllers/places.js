@@ -16,8 +16,17 @@ router.get('/', (req, res) => {
     })
   })
   
-  //post
+  //create
   router.post('/', (req, res) => {
+    if(!req.body.pic){
+      req.body.pic = undefined
+    }
+    if(!req.body.state) {
+      req.body.state = undefined
+    }
+    if(!req.body.city) {
+      req.body.city = undefined
+    }
     db.Place.create(req.body)
     .then(() => {
         res.redirect('/places')
