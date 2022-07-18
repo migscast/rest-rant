@@ -8,8 +8,12 @@ const placeSchema = new Schema({
     cuisines: {type: String, required: true},
     city: {type: String, default: 'Anytown'},
     state: {type: String, default: 'USA'},
-    founded: Number
+    founded: { type: Number, min: [1800, "Can't be older"], max: [new Date().getFullYear(), "Greetings, From the world of tomorrow!!"]}
 })
+
+placeSchema.methods.showEstablished = function() {
+    return `${this.name} has been serving ${this.city}, ${this.state} since ${this.founded}.`
+}
 
 const Place= mongoose.model('Place', placeSchema)
 
