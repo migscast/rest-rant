@@ -6,5 +6,8 @@ let commentSchema = new mongoose.Schema({
     stars: { type: Number, required: true },
     content: { type: String, default: '' }
 })
+
+const Comment =  mongoose.model('Comment', commentSchema)
+
   
-module.exports = mongoose.model('Comment', commentSchema)
+module.exports = Comment

@@ -32,7 +32,7 @@ function show (data) {
             <h4>serving {data.place.cuisines}</h4>
             <h3>Comments</h3>
             {comments}
-            <a href={`place/${data.id}/comment`} className="btn" id="comment-btn">
+            <a href={`/places/${data.id}/comment`} className="btn" id="comment-btn">
               Leave a Comment
             </a>
             <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 

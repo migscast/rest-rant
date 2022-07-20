@@ -2,7 +2,7 @@ const React = require('react')
 const Def = require('../default.jsx')
 
 function commenting(data) {
-    return(
+    return (
         <Def>
             <main>
                 <h1>Leave a Comment</h1>
