@@ -1,4 +1,4 @@
-const db = require('./models')
+const db = require('../models')
 
 db.Place.create([{
     name: 'Puzzles',
@@ -7,7 +7,7 @@ db.Place.create([{
     cuisines: 'Bar Food',
     pic: '/images/puzzle-piece.jpg',
     founded: 2012
-},{
+}, {
     name: 'Shokugeki no Restaurant',
     city: 'New York City',
     state: 'NY',
