@@ -41,3 +41,6 @@ main {
   margin-left: 20px;
   background-color: white;
 }
+#comment-btn {
+  background-color: lightgreen
+}
