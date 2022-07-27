@@ -29,7 +29,7 @@ function show (data) {
     comments = data.place.comments.map(c => {
       return (
         <div className='border'>
-          <h2 className='rant'>{c.rant ? 'Rant' : 'Rave'}</h2>
+          <h2 className='rant'>{c.rant ? 'Rant 😠 ' : 'Rave 😍'}</h2>
           <h4>{c.content}</h4>
           <h3>
             <strong> - {c.author}</strong>
@@ -51,13 +51,13 @@ function show (data) {
             <h4>serving {data.place.cuisines}</h4>
             <h3>Comments</h3>
             {comments}
-            <a href={`/places/${data.id}/comment`} className="btn" id="comment-btn">
+            <a href={`/places/${data.place.id}/comment`} className="btn" id="comment-btn">
               Leave a Comment
             </a>
-            <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
+            <a href={`/places/${data.place.id}/edit`} className="btn btn-warning"> 
               Edit
             </a>
-            <form action={`/places/${data.id}?_method=DELETE`} method='POST' >
+            <form action={`/places/${data.place.id}?_method=DELETE`} method='POST' >
               <button type='submit' className='btn btn-danger'>
                 Delete
               </button>

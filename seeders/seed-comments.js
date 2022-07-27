@@ -7,7 +7,7 @@ async function seed() {
 
     //Create a sample comment
     let comment = await db.Comment.create({
-        author: 'Starving Stan',
+        author: 'Rude Russel',
         rant: false,
         stars: 5-0,
         content: 'If you saw the anime, you know.'
