@@ -7,5 +7,25 @@
     "mongoose": "^6.4.4",
     "nodemon": "^2.0.18",
     "react": "^18.2.0"
-  }
+  },
+  "name": "rest-rant",
+  "description": "REST-Rant is an app where users can review restaurants.",
+  "version": "1.0.0",
+  "engines":{"node": "16.14.0"},
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migscast/rest-rant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/migscast/rest-rant/issues"
+  },
+  "homepage": "https://github.com/migscast/rest-rant#readme"
 }
